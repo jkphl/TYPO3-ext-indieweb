@@ -1,0 +1,33 @@
+{
+  "name" : "jkphl/typo3-indieweb",
+  "description" : "Growing collection of IndieWeb publishing tools for TYPO3 sites, currently featuring Webmentions",
+  "require" : {
+    "php" : ">=5.3.0",
+    "jkphl/micrometa" : ">=v0.2.1"
+  },
+  "config": {
+    "vendor-dir": "Classes/Vendor"
+  },
+  "repositories" : [ {
+    "type" : "composer",
+    "url" : "https://packagist.org/"
+  }, {
+    "type" : "vcs",
+    "url" : "https://github.com/jkphl/TYPO3-ext-indieweb"
+  } ],
+  "authors" : [ {
+    "name" : "Joschi Kuphal",
+    "email" : "joschi@kuphal.net",
+    "homepage" : "http://joschi.kuphal.net",
+    "role" : "Developer"
+  } ],
+  "support" : {
+    "email" : "joschi@kuphal.net",
+    "issues" : "https://github.com/jkphl/TYPO3-ext-indieweb/issues",
+    "source" : "https://github.com/jkphl/TYPO3-ext-indieweb"
+  },
+  "keywords" : [ "TYPO3", "extension", "indieweb", "publish", "webmention", "microdata", "microformats", "microformats2", "mf2" ],
+  "license" : "GPL2",
+  "type" : "library",
+  "homepage" : "http://jkphl.is"
+}

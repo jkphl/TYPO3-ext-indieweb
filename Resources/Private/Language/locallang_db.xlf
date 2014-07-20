@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2014-07-20T13:19:58Z" product-name="indieweb">
+		<header/>
+		<body>
+			<trans-unit id="tx_indieweb_domain_model_webmention">
+				<source>Webmention</source>
+			</trans-unit>
+			<trans-unit id="tx_indieweb_domain_model_webmention.source">
+				<source>Source</source>
+			</trans-unit>
+			<trans-unit id="tx_indieweb_domain_model_webmention.target">
+				<source>Target</source>
+			</trans-unit>
+			<trans-unit id="tx_indieweb_domain_model_webmention.processed">
+				<source>Processed</source>
+			</trans-unit>
+			<trans-unit id="tx_indieweb_domain_model_webmention.valid">
+				<source>Valid</source>
+			</trans-unit>
+			
+			<trans-unit id="constants.file.templateRootPath" xml:space="preserve">
+				<source>Path to template root (FE)</source>
+			</trans-unit>
+			<trans-unit id="constants.file.partialRootPath" xml:space="preserve">
+				<source>Path to template partials (FE)</source>
+			</trans-unit>
+			<trans-unit id="constants.file.layoutRootPath" xml:space="preserve">
+				<source>Path to template layouts (FE)</source>
+			</trans-unit>
+			<trans-unit id="constants.pid.storagePid" xml:space="preserve">
+				<source>Default storage page (ID)</source>
+			</trans-unit>
+			<trans-unit id="constants.enable.webmentions" xml:space="preserve">
+				<source>Webmentions</source>
+			</trans-unit>
+			<trans-unit id="constants.enable.webmentions.async" xml:space="preserve">
+				<source>Process webmentions asynchronously:Remember to install the appropriate scheduler task for asynchronous webmention processing.</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

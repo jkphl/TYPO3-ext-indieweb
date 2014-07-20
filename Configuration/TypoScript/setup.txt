@@ -1,0 +1,70 @@
+plugin.tx_indieweb {
+	view {
+		templateRootPath					= {$plugin.tx_indieweb.view.templateRootPath}
+		partialRootPath						= {$plugin.tx_indieweb.view.partialRootPath}
+		layoutRootPath						= {$plugin.tx_indieweb.view.layoutRootPath}
+	}
+	persistence {
+		storagePid							= {$plugin.tx_indieweb.persistence.storagePid}
+	}
+	features {
+		webmentions							= {$plugin.tx_indieweb.features.webmentions}
+		# uncomment the following line to enable the new Property Mapper.
+		# rewrittenPropertyMapper			= 1
+	}
+	settings {
+		webmentionsAsync					= {$plugin.tx_indieweb.settings.webmentionsAsync}
+	}
+}
+	
+# ACTIVATE WEBMENTION SUPPORT
+[globalVar = LIT:1 = {$plugin.tx_indieweb.features.webmentions}]
+
+	# INDICATE WEBMENTION SUPPORT AS <link rel="webmention"/>
+	page.headerData.500						= TEXT
+	page.headerData.500 {
+		wrap								= <link href="|" rel="webmention"/>
+		htmlSpecialChars					= 1
+		stdWrap.typolink {
+			parameter						= {leveluid:0},1500
+			parameter.insertData			= 1
+			returnLast						= url
+			forceAbsoluteUrl				= 1
+		}
+	}
+
+	# REGISTER WEBMENTION PLUGIN
+	indiewebWebmention						= PAGE
+	indiewebWebmention {
+		typeNum								= 1500
+		10									= USER
+		10 {
+			userFunc						= tx_extbase_core_bootstrap->run
+			settings		 				< plugin.tx_indieweb.settings
+			persistence 					< plugin.tx_indieweb.persistence
+			view							< plugin.tx_indieweb.view
+			vendorName						= Jkphl
+			extensionName					= Indieweb
+			pluginName						= Webmention
+			controller						= Webmention
+			action							= ping
+			switchableControllerActions{
+				Webmention {
+					1						= ping
+				}
+			}
+		}
+		config {
+			disableAllHeaderCode			= 1
+			disableCharsetHeader			= 1
+			xhtml_cleaning					= 0
+			admPanel						= 0
+			sourceopt {
+				enabled						= 0
+				formatHtml					= 0
+			}
+			index_enable					= 0
+		}
+	}
+
+[global]
