@@ -1,4 +1,15 @@
 <?php
+
+/**
+ * IndieWeb publishing tools for TYPO3
+ *
+ * @category	Jkphl
+ * @package		Jkphl_Indieweb
+ * @author		Joschi Kuphal <joschi@kuphal.net> / @jkphl
+ * @copyright	Copyright © 2014 Joschi Kuphal <joschi@kuphal.net> / @jkphl
+ * @license		http://www.gnu.org/licenses/gpl-2.0.html GNU General Public License version 2 (GPL2)
+ */
+
 namespace Jkphl\Indieweb\Domain\Model;
 
 /***************************************************************
@@ -26,11 +37,13 @@ namespace Jkphl\Indieweb\Domain\Model;
  ***************************************************************/
 
 /**
- * Page
+ * Page model
  *
- * @package indieweb
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
- *
+ * @category	Jkphl
+ * @package		Jkphl_Indieweb
+ * @author		Joschi Kuphal <joschi@kuphal.net> / @jkphl
+ * @copyright	Copyright © 2014 Joschi Kuphal <joschi@kuphal.net> / @jkphl
+ * @license		http://www.gnu.org/licenses/gpl-2.0.html GNU General Public License version 2 (GPL2)
  */
 class Page extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**

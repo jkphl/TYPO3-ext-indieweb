@@ -7,9 +7,22 @@ CREATE TABLE tx_indieweb_domain_model_webmention (
 	pid int(11) DEFAULT '0' NOT NULL,
 
 	source varchar(255) DEFAULT '' NOT NULL,
-	target int(11) NOT NULL,
+	target varchar(255) DEFAULT '' NOT NULL,
+	data text DEFAULT '' NOT NULL,
 	processed datetime,
 	valid tinyint(4) unsigned DEFAULT '0' NOT NULL,
+	
+	author_name tinytext,
+	author_profile tinytext,
+	author_avatar tinytext,
+	entry_name tinytext,
+	entry_summary text,
+	entry_value tinytext,
+	entry_content text,
+	entry_published datetime,
+	entry_updated datetime,
+	entry_url tinytext,
+	context text,
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,

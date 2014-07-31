@@ -15,6 +15,15 @@
 			<trans-unit id="tx_indieweb_domain_model_webmention.processed">
 				<source>Processed</source>
 			</trans-unit>
+			<trans-unit id="task.processWebmentionsTask.name">
+				<source>Process webmentions</source>
+			</trans-unit>
+			<trans-unit id="task.processWebmentionsTask.description">
+				<source>Assynchronously process webmentions that have been registered. Make sure to have a custom hook in place in order to further exploit the processed webmentions.</source>
+			</trans-unit>
+			<trans-unit id="task.processWebmentionsTask.result">
+				<source>%s webmention(s) have been processed.</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

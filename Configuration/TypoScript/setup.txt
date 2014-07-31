@@ -13,7 +13,11 @@ plugin.tx_indieweb {
 		# rewrittenPropertyMapper			= 1
 	}
 	settings {
-		webmentionsAsync					= {$plugin.tx_indieweb.settings.webmentionsAsync}
+		webmentions {
+			async							= {$plugin.tx_indieweb.settings.webmentions.async}
+			excerpt							= {$plugin.tx_indieweb.settings.webmentions.excerpt}
+			infotype						= {$plugin.tx_indieweb.settings.webmentions.infotype}
+		}
 	}
 }
 	
@@ -34,9 +38,9 @@ plugin.tx_indieweb {
 	}
 
 	# REGISTER WEBMENTION PLUGIN
-	indiewebWebmention						= PAGE
-	indiewebWebmention {
-		typeNum								= 1500
+	indiewebWebmentionRegister				= PAGE
+	indiewebWebmentionRegister {
+		typeNum								= {$plugin.tx_indieweb.settings.webmentions.regtype}
 		10									= USER
 		10 {
 			userFunc						= tx_extbase_core_bootstrap->run
@@ -51,6 +55,40 @@ plugin.tx_indieweb {
 			switchableControllerActions{
 				Webmention {
 					1						= ping
+				}
+			}
+		}
+		config {
+			disableAllHeaderCode			= 1
+			disableCharsetHeader			= 1
+			xhtml_cleaning					= 0
+			admPanel						= 0
+			sourceopt {
+				enabled						= 0
+				formatHtml					= 0
+			}
+			index_enable					= 0
+		}
+	}
+	
+	# REGISTER WEBMENTION PLUGIN
+	indiewebWebmentionInfo					= PAGE
+	indiewebWebmentionInfo {
+		typeNum								= 1501
+		10									= USER_INT
+		10 {
+			userFunc						= tx_extbase_core_bootstrap->run
+			settings		 				< plugin.tx_indieweb.settings
+			persistence 					< plugin.tx_indieweb.persistence
+			view							< plugin.tx_indieweb.view
+			vendorName						= Jkphl
+			extensionName					= Indieweb
+			pluginName						= Webmention
+			controller						= Webmention
+			action							= info
+			switchableControllerActions{
+				Webmention {
+					1						= info
 				}
 			}
 		}

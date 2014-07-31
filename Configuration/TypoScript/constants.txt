@@ -17,7 +17,15 @@ plugin.tx_indieweb {
 		webmentions = 0
 	}
 	settings {
-		# cat=plugin.tx_indieweb/enable/b; type=boolean; label=LLL:EXT:indieweb/Resources/Private/Language/locallang_db.xlf:constants.enable.webmentions.async
-		webmentionsAsync = 1
+		webmentions {
+			# cat=plugin.tx_indieweb/enable/b; type=boolean; label=LLL:EXT:indieweb/Resources/Private/Language/locallang_db.xlf:constants.enable.webmentions.async
+			async = 1
+			# cat=plugin.tx_indieweb/enable/c; type=int+; label=LLL:EXT:indieweb/Resources/Private/Language/locallang_db.xlf:constants.enable.webmentions.excerpt
+			excerpt = 100
+			# cat=plugin.tx_indieweb/enable/d; type=int+; label=LLL:EXT:indieweb/Resources/Private/Language/locallang_db.xlf:constants.enable.webmentions.regtype
+			regtype = 1500
+			# cat=plugin.tx_indieweb/enable/e; type=int+; label=LLL:EXT:indieweb/Resources/Private/Language/locallang_db.xlf:constants.enable.webmentions.infotype
+			infotype = 1501
+		}
 	}
 }

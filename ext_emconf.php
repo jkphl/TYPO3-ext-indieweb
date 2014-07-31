@@ -12,7 +12,7 @@
 
 $EM_CONF[$_EXTKEY] = array(
 	'title' => 'IndieWeb Publishing Tools',
-	'description' => 'Growing collection of IndieWeb publishing tools for TYPO3 sites, currently featuring Webmentions',
+	'description' => 'Growing collection of IndieWeb publishing tools for TYPO3 sites, currently featuring the receipt of Webmentions',
 	'category' => 'plugin',
 	'author' => 'Joschi Kuphal',
 	'author_email' => 'joschi@kuphal.net',
@@ -21,7 +21,7 @@ $EM_CONF[$_EXTKEY] = array(
 	'uploadfolder' => '0',
 	'createDirs' => '',
 	'clearCacheOnLoad' => 0,
-	'version' => '0.0.1',
+	'version' => '0.1.0',
 	'constraints' => array(
 		'depends' => array(
 			'typo3' => '6.2',

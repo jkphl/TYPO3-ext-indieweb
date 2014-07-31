@@ -7,16 +7,49 @@
 				<source>Webmention</source>
 			</trans-unit>
 			<trans-unit id="tx_indieweb_domain_model_webmention.source">
-				<source>Source</source>
+				<source>Source URL</source>
 			</trans-unit>
 			<trans-unit id="tx_indieweb_domain_model_webmention.target">
-				<source>Target</source>
+				<source>Target URL</source>
 			</trans-unit>
 			<trans-unit id="tx_indieweb_domain_model_webmention.processed">
 				<source>Processed</source>
 			</trans-unit>
 			<trans-unit id="tx_indieweb_domain_model_webmention.valid">
 				<source>Valid</source>
+			</trans-unit>
+			<trans-unit id="tx_indieweb_domain_model_webmention.author.name">
+				<source>Author name</source>
+			</trans-unit>
+			<trans-unit id="tx_indieweb_domain_model_webmention.author.profile">
+				<source>Author profile</source>
+			</trans-unit>
+			<trans-unit id="tx_indieweb_domain_model_webmention.author.avatar">
+				<source>Author avatar</source>
+			</trans-unit>
+			<trans-unit id="tx_indieweb_domain_model_webmention.entry.name">
+				<source>Entry name</source>
+			</trans-unit>
+			<trans-unit id="tx_indieweb_domain_model_webmention.entry.summary">
+				<source>Entry summary</source>
+			</trans-unit>
+			<trans-unit id="tx_indieweb_domain_model_webmention.entry.value">
+				<source>Entry value</source>
+			</trans-unit>
+			<trans-unit id="tx_indieweb_domain_model_webmention.entry.content">
+				<source>Entry content</source>
+			</trans-unit>
+			<trans-unit id="tx_indieweb_domain_model_webmention.entry.published">
+				<source>Entry publish date</source>
+			</trans-unit>
+			<trans-unit id="tx_indieweb_domain_model_webmention.entry.updated">
+				<source>Entry modification date</source>
+			</trans-unit>
+			<trans-unit id="tx_indieweb_domain_model_webmention.entry.ul">
+				<source>Entry URL</source>
+			</trans-unit>
+			<trans-unit id="tx_indieweb_domain_model_webmention.entry.context">
+				<source>Context</source>
 			</trans-unit>
 			
 			<trans-unit id="constants.file.templateRootPath" xml:space="preserve">
@@ -36,6 +69,15 @@
 			</trans-unit>
 			<trans-unit id="constants.enable.webmentions.async" xml:space="preserve">
 				<source>Process webmentions asynchronously:Remember to install the appropriate scheduler task for asynchronous webmention processing.</source>
+			</trans-unit>
+			<trans-unit id="constants.enable.webmentions.excerpt" xml:space="preserve">
+				<source>Webmentions excerpt length</source>
+			</trans-unit>
+			<trans-unit id="constants.enable.webmentions.regtype" xml:space="preserve">
+				<source>Page type for webmention registrations</source>
+			</trans-unit>
+			<trans-unit id="constants.enable.webmentions.infotype" xml:space="preserve">
+				<source>Page type for webmention info requests</source>
 			</trans-unit>
 		</body>
 	</file>

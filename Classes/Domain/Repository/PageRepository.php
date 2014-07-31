@@ -1,13 +1,22 @@
 <?php
+
+/**
+ * IndieWeb publishing tools for TYPO3
+ *
+ * @category	Jkphl
+ * @package		Jkphl_Indieweb
+ * @author		Joschi Kuphal <joschi@kuphal.net> / @jkphl
+ * @copyright	Copyright © 2014 Joschi Kuphal <joschi@kuphal.net> / @jkphl
+ * @license		http://www.gnu.org/licenses/gpl-2.0.html GNU General Public License version 2 (GPL2)
+ */
+
 namespace Jkphl\Indieweb\Domain\Repository;
 
-
 /***************************************************************
- *
  *  Copyright notice
  *
- *  (c) 2014 Joschi Kuphal <joschi@kuphal.net>, tollwerk GmbH
- *
+ *  (c) 2013 Joschi Kuphal <joschi@tollwerk.de>, tollwerk GmbH
+ *  
  *  All rights reserved
  *
  *  This script is part of the TYPO3 project. The TYPO3 project is
@@ -28,6 +37,12 @@ namespace Jkphl\Indieweb\Domain\Repository;
  ***************************************************************/
 
 /**
- * The repository for pages
+ * Pages repository
+ *
+ * @category	Jkphl
+ * @package		Jkphl_Indieweb
+ * @author		Joschi Kuphal <joschi@kuphal.net> / @jkphl
+ * @copyright	Copyright © 2014 Joschi Kuphal <joschi@kuphal.net> / @jkphl
+ * @license		http://www.gnu.org/licenses/gpl-2.0.html GNU General Public License version 2 (GPL2)
  */
 class PageRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {}
