@@ -1,6 +1,6 @@
 {
   "name" : "jkphl/typo3-indieweb",
-  "description" : "Growing collection of IndieWeb publishing tools for TYPO3 sites, currently featuring the receipt of Webmentions",
+  "description" : "A growing collection of IndieWeb publishing tools for TYPO3 sites, currently featuring the receipt of Webmentions",
   "require" : {
     "php" : ">=5.3.0",
     "jkphl/micrometa" : ">=v0.2.1"

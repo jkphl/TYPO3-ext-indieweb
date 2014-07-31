@@ -23,7 +23,7 @@ IndieWeb Publishing Tools
 		en
 
 	:Description:
-		Growing collection of IndieWeb publishing tools for TYPO3 sites, currently featuring the receipt of Webmentions
+		A growing collection of IndieWeb publishing tools for TYPO3 sites, currently featuring the receipt of Webmentions
 
 	:Keywords:
 		TYPO3, Extension, IndieWeb, Publishing, Webmention, Microformats, mf2
