@@ -1,0 +1,2 @@
+  # cat=basic; type=boolean; label=Enable demo webmention hook: Will print extended data on a successful webmention processing (for demo / development purposes only)
+webmentionsDemoHook = 0
