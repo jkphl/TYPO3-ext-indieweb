@@ -22,7 +22,7 @@ the **constant editor**. The following sections list the constants grouped by fe
       :local:
       :depth: 1
 
-.. _configuration-general
+.. _configuration-general:
 
 General
 -------

@@ -1,10 +1,6 @@
 /.settings
 /.buildpath
 /.project
-composer.lock
 /Classes/Vendor
-*.md.html
-/Documentation/_static
-/Documentation/_not_versioned
-/Documentation/Localization*
-/Documentation/Dump.rst
+/composer.lock
+/*.md.html

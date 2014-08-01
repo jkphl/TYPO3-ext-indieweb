@@ -32,4 +32,3 @@ implemented by the site :ref:`administrator <admin-manual>` / :ref:`developer <d
 
 
 .. _Pingbacks: http://en.wikipedia.org/wiki/Pingback
-.. _administrator: `admin-manual`_

@@ -1,5 +1,5 @@
 {
-  "name" : "jkphl/typo3-indieweb",
+  "name" : "indieweb",
   "description" : "A growing collection of IndieWeb publishing tools for TYPO3 sites, currently featuring the receipt of Webmentions",
   "require" : {
     "php" : ">=5.3.0",
