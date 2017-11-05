@@ -1,34 +1,63 @@
 {
-  "name" : "indieweb",
-  "description" : "A growing collection of IndieWeb publishing tools for TYPO3 sites, currently featuring the receipt of Webmentions",
-  "require" : {
-    "php" : ">=5.3.0",
-    "jkphl/micrometa" : ">=v0.2.1"
+  "name": "jkphl/indieweb",
+  "type": "typo3-cms-extension",
+  "description": "A growing collection of IndieWeb publishing tools for TYPO3 sites, currently featuring the receipt of Webmentions",
+  "homepage": "https://nueww.tollwerk.de",
+  "license": "GPL-2.0+",
+  "version": "1.0",
+  "minimum-stability": "RC",
+  "require": {
+    "php": ">=5.5.0",
+    "jkphl/micrometa": "~2.0.1",
+    "typo3/cms": "~8.7"
   },
-  "minimum-stability": "dev",
-  "config": {
-    "vendor-dir": "Classes/Vendor"
+  "autoload": {
+    "psr-4": {
+      "Jkphl\\Indieweb\\": "Classes/"
+    }
   },
-  "repositories" : [ {
-    "type" : "composer",
-    "url" : "https://packagist.org/"
-  }, {
-    "type" : "vcs",
-    "url" : "https://github.com/jkphl/TYPO3-ext-indieweb"
-  } ],
-  "authors" : [ {
-    "name" : "Joschi Kuphal",
-    "email" : "joschi@kuphal.net",
-    "homepage" : "http://joschi.kuphal.net",
-    "role" : "Developer"
-  } ],
-  "support" : {
-    "email" : "joschi@kuphal.net",
-    "issues" : "https://github.com/jkphl/TYPO3-ext-indieweb/issues",
-    "source" : "https://github.com/jkphl/TYPO3-ext-indieweb"
+  "autoload-dev": {
+    "psr-4": {
+      "Jkphl\\Indieweb\\Tests\\": "Tests/",
+      "TYPO3\\CMS\\Core\\Tests\\": ".Build/vendor/typo3/cms/typo3/sysext/core/Tests/"
+    }
   },
-  "keywords" : [ "TYPO3", "extension", "indieweb", "publish", "webmention", "microdata", "microformats", "microformats2", "mf2" ],
-  "license" : "GPL2",
-  "type" : "library",
-  "homepage" : "http://jkphl.is"
+  "replace": {
+    "indieweb": "self.version",
+    "typo3-ter/indieweb": "self.version"
+  },
+  "authors": [
+    {
+      "name": "Joschi Kuphal",
+      "email": "joschi@kuphal.net",
+      "homepage": "https://jkphl.is",
+      "role": "Developer"
+    }
+  ],
+  "extra": {
+    "branch-alias": {
+      "dev-master": "master"
+    },
+    "typo3/cms": {
+      "cms-package-dir": "{$vendor-dir}/typo3/cms",
+      "web-dir": ".Build/Web"
+    }
+  },
+  "homepage": "https://jkphl.is",
+  "support": {
+    "email": "joschi@kuphal.net",
+    "issues": "https://github.com/jkphl/TYPO3-ext-indieweb/issues",
+    "source": "https://github.com/jkphl/TYPO3-ext-indieweb"
+  },
+  "keywords": [
+    "TYPO3",
+    "extension",
+    "indieweb",
+    "publish",
+    "webmention",
+    "microdata",
+    "microformats",
+    "microformats2",
+    "mf2"
+  ]
 }

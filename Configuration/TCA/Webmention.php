@@ -6,7 +6,7 @@
  * @category	Jkphl
  * @package		Jkphl_Indieweb
  * @author		Joschi Kuphal <joschi@kuphal.net> / @jkphl
- * @copyright	Copyright © 2014 Joschi Kuphal <joschi@kuphal.net> / @jkphl
+ * @copyright	Copyright © 2017 Joschi Kuphal <joschi@kuphal.net> / @jkphl
  * @license		http://www.gnu.org/licenses/gpl-2.0.html GNU General Public License version 2 (GPL2)
  */
 
@@ -14,7 +14,7 @@
  *
  *  Copyright notice
  *
- *  (c) 2014 Joschi Kuphal <joschi@kuphal.net>, tollwerk GmbH
+ *  (c) 2017 Joschi Kuphal <joschi@kuphal.net>, tollwerk GmbH
  *
  *  All rights reserved
  *

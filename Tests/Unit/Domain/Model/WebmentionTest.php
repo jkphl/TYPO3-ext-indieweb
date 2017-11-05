@@ -5,7 +5,7 @@ namespace Jkphl\Indieweb\Tests\Unit\Domain\Model;
 /***************************************************************
  *  Copyright notice
  *
- *  (c) 2014 Joschi Kuphal <joschi@kuphal.net>, tollwerk GmbH
+ *  (c) 2017 Joschi Kuphal <joschi@kuphal.net>, tollwerk GmbH
  *
  *  All rights reserved
  *

@@ -1,108 +1,113 @@
 plugin.tx_indieweb {
 	view {
-		templateRootPath					= {$plugin.tx_indieweb.view.templateRootPath}
-		partialRootPath						= {$plugin.tx_indieweb.view.partialRootPath}
-		layoutRootPath						= {$plugin.tx_indieweb.view.layoutRootPath}
+		templateRootPath = {$plugin.tx_indieweb.view.templateRootPath}
+		partialRootPath = {$plugin.tx_indieweb.view.partialRootPath}
+		layoutRootPath = {$plugin.tx_indieweb.view.layoutRootPath}
 	}
+
 	persistence {
-		storagePid							= {$plugin.tx_indieweb.persistence.storagePid}
+		storagePid = {$plugin.tx_indieweb.persistence.storagePid}
 	}
+
 	features {
-		webmentions							= {$plugin.tx_indieweb.features.webmentions}
+		webmentions = {$plugin.tx_indieweb.features.webmentions}
 		# uncomment the following line to enable the new Property Mapper.
-		# rewrittenPropertyMapper			= 1
+		# rewrittenPropertyMapper            = 1
 	}
+
 	settings {
 		webmentions {
-			async							= {$plugin.tx_indieweb.settings.webmentions.async}
-			excerpt							= {$plugin.tx_indieweb.settings.webmentions.excerpt}
-			infotype						= {$plugin.tx_indieweb.settings.webmentions.infotype}
+			async = {$plugin.tx_indieweb.settings.webmentions.async}
+			excerpt = {$plugin.tx_indieweb.settings.webmentions.excerpt}
+			infotype = {$plugin.tx_indieweb.settings.webmentions.infotype}
 		}
 	}
 }
-	
+
 # ACTIVATE WEBMENTION SUPPORT
 [globalVar = LIT:1 = {$plugin.tx_indieweb.features.webmentions}]
-
 	# INDICATE WEBMENTION SUPPORT AS <link rel="webmention"/>
-	page.headerData.500						= TEXT
+	page.headerData.500 = TEXT
 	page.headerData.500 {
-		wrap								= <link href="|" rel="webmention"/>
-		htmlSpecialChars					= 1
+		wrap = <link href="|" rel="webmention"/>
+		htmlSpecialChars = 1
 		stdWrap.typolink {
-			parameter						= {leveluid:0},1500
-			parameter.insertData			= 1
-			returnLast						= url
-			forceAbsoluteUrl				= 1
+			parameter = {leveluid:0},1500
+			parameter.insertData = 1
+			returnLast = url
+			forceAbsoluteUrl = 1
 		}
 	}
 
 	# REGISTER WEBMENTION PLUGIN
-	indiewebWebmentionRegister				= PAGE
+	indiewebWebmentionRegister = PAGE
 	indiewebWebmentionRegister {
-		typeNum								= {$plugin.tx_indieweb.settings.webmentions.regtype}
-		10									= USER
+		typeNum = {$plugin.tx_indieweb.settings.webmentions.regtype}
+		10 = USER_INT
 		10 {
-			userFunc						= tx_extbase_core_bootstrap->run
-			settings		 				< plugin.tx_indieweb.settings
-			persistence 					< plugin.tx_indieweb.persistence
-			view							< plugin.tx_indieweb.view
-			vendorName						= Jkphl
-			extensionName					= Indieweb
-			pluginName						= Webmention
-			controller						= Webmention
-			action							= ping
-			switchableControllerActions{
+			userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
+			settings < plugin.tx_indieweb.settings
+			persistence < plugin.tx_indieweb.persistence
+			view < plugin.tx_indieweb.view
+			vendorName = Jkphl
+			extensionName = Indieweb
+			pluginName = Webmention
+			controller = Webmention
+			action = ping
+			switchableControllerActions {
 				Webmention {
-					1						= ping
+					1 = ping
 				}
 			}
 		}
+
 		config {
-			disableAllHeaderCode			= 1
-			disableCharsetHeader			= 1
-			xhtml_cleaning					= 0
-			admPanel						= 0
+			disableAllHeaderCode = 1
+			disableCharsetHeader = 1
+			xhtml_cleaning = 0
+			admPanel = 0
 			sourceopt {
-				enabled						= 0
-				formatHtml					= 0
+				enabled = 0
+				formatHtml = 0
 			}
-			index_enable					= 0
-		}
-	}
-	
-	# REGISTER WEBMENTION PLUGIN
-	indiewebWebmentionInfo					= PAGE
-	indiewebWebmentionInfo {
-		typeNum								= 1501
-		10									= USER_INT
-		10 {
-			userFunc						= tx_extbase_core_bootstrap->run
-			settings		 				< plugin.tx_indieweb.settings
-			persistence 					< plugin.tx_indieweb.persistence
-			view							< plugin.tx_indieweb.view
-			vendorName						= Jkphl
-			extensionName					= Indieweb
-			pluginName						= Webmention
-			controller						= Webmention
-			action							= info
-			switchableControllerActions{
-				Webmention {
-					1						= info
-				}
-			}
-		}
-		config {
-			disableAllHeaderCode			= 1
-			disableCharsetHeader			= 1
-			xhtml_cleaning					= 0
-			admPanel						= 0
-			sourceopt {
-				enabled						= 0
-				formatHtml					= 0
-			}
-			index_enable					= 0
+
+			index_enable = 0
 		}
 	}
 
+	# REGISTER WEBMENTION PLUGIN
+	indiewebWebmentionInfo = PAGE
+	indiewebWebmentionInfo {
+		typeNum = 1501
+		10 = USER_INT
+		10 {
+			userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
+			settings < plugin.tx_indieweb.settings
+			persistence < plugin.tx_indieweb.persistence
+			view < plugin.tx_indieweb.view
+			vendorName = Jkphl
+			extensionName = Indieweb
+			pluginName = Webmention
+			controller = Webmention
+			action = info
+			switchableControllerActions {
+				Webmention {
+					1 = info
+				}
+			}
+		}
+
+		config {
+			disableAllHeaderCode = 1
+			disableCharsetHeader = 1
+			xhtml_cleaning = 0
+			admPanel = 0
+			sourceopt {
+				enabled = 0
+				formatHtml = 0
+			}
+
+			index_enable = 0
+		}
+	}
 [global]
